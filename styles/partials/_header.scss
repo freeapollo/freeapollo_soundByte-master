@@ -1,0 +1,340 @@
+header {
+	background-image: url('../assets/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    color: #fff;
+	    @include respond-to('xlarge') {
+	    	background-position: 15% 50%;
+	    }
+	     @include respond-to('large') {
+	    	background-position: 25% 50%;
+	    }
+	    @include respond-to('medium') {
+	    	background-position: 25% 50%;
+	    }
+	    @include respond-to('small') {
+			min-height: 1200px;
+			background-position:left center;
+			box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .3)
+		}
+}
+
+.headerNav {
+	text-align: center;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	height: 124px;
+		a:hover {
+			color: $green;
+		}
+		img {
+			padding-top: 29px;
+			padding-bottom: 13px;
+		}
+		br {
+			display: none;
+		}
+		@include respond-to('large') {
+			height: 170px;
+		}
+		@include respond-to('small') {
+			br {
+				display: block;
+			}
+				height: 200px;
+		}
+}
+
+.headerNav__flexContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 19px;
+		@include respond-to('large') {
+			flex-direction: column;
+			justify-content: center;
+			ul {
+				margin-top: 10px;
+			}
+	}
+	.donateButton {
+		font-family: $ptsans;
+		font-weight: 400;
+		width: 86px;
+		height: 29px;
+		font-size: 12px;
+		letter-spacing: 2px;
+		color: white;
+		padding-top: 5px;
+		text-transform: uppercase;
+		border: solid 2px #ffffff;
+		margin-left: 46px;
+			&:hover {
+				background-color: white;
+				color: $green;
+			}
+			@include respond-to('large') {
+			margin-left: 0px;
+			margin-top: 22px;
+		}
+	}
+}
+
+.nav {
+	font-family: $ptsans;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 2px;
+		a {
+			padding-right: 15px;
+		}
+		@include respond-to('small') {
+			a {
+				display: inline-block;
+				padding: 5px;
+			}
+		}
+
+	}
+
+.headerSection2 {
+	min-height: 50vh;
+	padding-top: 65px;
+	padding-bottom: 20px;
+		@include respond-to('large') {
+			padding-top: 5px;
+			padding-bottom: 40px;
+		}
+		@include respond-to('xlarge') {
+			padding-top: 0px;
+		}
+		@include respond-to('medium') {
+			padding-top: 0px;
+		}
+}
+
+
+.headerFlex {
+	min-height: calc(100vh - 244px);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+		@include respond-to('xlarge') {
+			flex-direction: column;
+			align-items: left;
+			justify-content: center;
+			padding-left: 50px;
+		}
+		@include respond-to('large') {
+			flex-direction: column;
+			align-items: left;
+			padding-left: 50px;
+		}
+		@include respond-to('medium') {
+			align-items: left;
+			padding-left: 50px;
+		}
+		@include respond-to('small') {
+			padding-left: 0px;
+			align-items: center;
+		}
+}
+
+.headerFlex__cell--left {
+	max-width: 432px;
+	letter-spacing: 2px;
+		h4 {
+			font-family: $ptsans;
+			font-weight: 400;
+			font-size: 30px;
+			font-weight: 400;
+			letter-spacing: normal;
+			color: rgba(217, 217, 217, 0.75);
+			span {
+				color: rgba(255, 255, 255, 0.9);
+			}
+		}
+		p {
+			font-family: $ptsans;
+			font-size: 20px;
+			position: relative;
+			margin-bottom: 32px;
+		}
+		p::after {
+			content: "";
+			position: absolute;
+			top: 60px;
+			width: 433px;
+			height: 2px;
+			background-color: rgba(255, 255, 255, 0.3);
+			border-radius: 2px;
+			left: 50%;
+			transform: translateX(-50%);
+			@include respond-to('small') {
+			width: 300px;
+			top: 80px;
+		}
+	}
+		.button {
+			font-family: $poppins;
+			font-weight: 600;
+			width: 153px;
+			height: 54px;
+			font-size: 12px;
+			letter-spacing: 2px;	
+		}
+		.button__green {
+			color: white;
+			text-transform: uppercase;
+			background-color: $green;
+			border: solid 2px $green;
+			border-radius: 25px;
+			&:hover {
+				background-color: white;
+				border: solid 2px white;
+				color: $green;
+			}
+		}
+		ul {
+			display: inline;
+			padding-left: 27px;
+			a {
+				padding-right: 6px;
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+		@include respond-to('xlarge') {
+			text-align: center;
+		}
+		@include respond-to('large') {
+			text-align: center;
+		}
+		@include respond-to('small') {
+			max-width: 300px;
+		}
+}
+
+.buttonAndSocialLinks {
+	display: block;
+	padding-top: 56px;
+	margin: 0 auto;
+		@include respond-to('small') {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			ul {
+				margin: 0px;
+				padding: 0px;
+				padding-top: 30px;
+			}
+		}
+}
+
+.headerFlex__cell--right {
+	max-width: 469px;
+	position: relative;
+		@include respond-to('xlarge') {
+			margin-top: 75px;
+		}
+		@include respond-to('large') {
+			margin-top: 80px;
+		}
+		@include respond-to('medium') {
+			margin-top: 75px;
+		}
+		@include respond-to('small') {
+			max-width: 300px;
+		}
+		p {
+			font-family: $roboto;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 28px;
+			letter-spacing: 2px;
+		}
+}
+
+.episodeHeading {
+	font-family: $ptsans;
+	font-weight: 400;
+	font-size: 32px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.episodeDate {
+	font-family: $roboto;
+	color: white;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-top: 14px;
+	margin-bottom: 8px;
+}
+
+.episodeDescription {
+	margin-top: 0px;
+}
+
+.bigKeyline::before {
+	content: "";
+	position: absolute;
+	bottom:73px;
+	width: 469px;
+	height: 12px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+		@include respond-to('large') {
+			width: 400px;
+			bottom: 70px;
+		}
+		@include respond-to('small') {
+			width: 300px;
+			bottom: 50px;
+		}
+}
+
+.smallGreenText {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	font-family: $roboto;
+	font-size: 16px;
+	letter-spacing: 2px;
+	color: $green;
+	text-transform: uppercase;
+	font-weight: 400;
+		p {
+			margin-bottom: 16px;
+		}
+}
+
+.smallGreenText--left {
+	display: flex;
+	align-items: center;
+		img {
+			padding-right: 11px;
+		}
+}
+
+.smallGreenText--right {
+	display: flex;
+	align-items: center;
+		img {
+			padding-right: 7px;
+		}
+}
+
+
+
+
+

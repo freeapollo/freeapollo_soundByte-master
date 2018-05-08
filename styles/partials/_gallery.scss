@@ -1,0 +1,336 @@
+
+.podcastEpisodes {
+	background-color: #1a171a;
+}
+
+.audioPlayer {
+	background: black;
+	display: flex;
+	width: 100%;
+}
+
+.audioPlayerContents {
+	margin: 0 auto;
+	padding: 0px;
+	max-width: 768px;
+	height: 54px;
+	display: flex;
+	align-items: center;
+		@include respond-to('small') {
+			margin: 0 auto;
+			max-width: 768px;
+		}
+}
+
+.playButton {
+	height: 54px;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	align-items: center;
+		a {
+			padding-right: 24px;
+			padding-left: 26px;
+		}
+}
+
+.time {
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+		p {
+			color: $green;
+			font-family: $roboto;
+			font-weight: bold;
+			font-size: 14px;
+			letter-spacing: 1px;
+			padding-left: 20px;
+			margin-right: 508px;
+			position: relative;
+			@include respond-to('medium') {
+			margin-right: 350px;
+			padding-left: 10px;
+		}
+			@include respond-to('small') {
+			margin-right: 100px;
+			padding-left: 10px;
+		}
+		}
+		p::after {
+			content: "";
+			position: absolute;
+			width: 470px;
+			height: 4px;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 25px;
+			bottom: 8px;
+			left: 80px;
+			@include respond-to('large') {
+			bottom: 6px;
+			left: 80px;
+		}
+			@include respond-to('medium') {
+			width: 300px;
+		}
+			left: 70px;
+			@include respond-to('small') {
+			width: 65px;
+			left: 70px;
+			bottom: 6px;
+		}
+	}
+		a {
+			padding-right: 30px;
+				@include respond-to('small') {
+				padding-right: 10px;
+				padding-left: 2px;
+		}
+		}
+}
+
+.volumeControl {
+	height: 54px;
+	display: flex;
+	align-items: center;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+		a {
+			padding-right: 23px;
+			padding-left: 23px;
+		}
+}
+
+
+.browseEpisodesFlex {
+	text-align: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 53px;
+	margin-bottom: 54px;
+		@include respond-to('medium') {
+			flex-direction: column;
+			margin: 0px;
+		}
+		@include respond-to('small') {
+			flex-direction: column;
+			margin: 0px;
+		}
+		h5 {
+			font-family: $ptsans;
+			font-weight: 400;
+			text-transform: uppercase;
+			font-size: 21px;
+			letter-spacing: 2px;
+			color: white;
+			@include respond-to('medium') {
+			font-size: 30px;
+			}
+			@include respond-to('small') {
+			font-size: 21px;
+			}
+		}
+		h6 {
+			font-family: $ptsans;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 14px;
+			letter-spacing: 2px;
+			position: relative;
+			a {
+				border-bottom: 4px solid $green;
+			}
+
+			@include respond-to('medium') {
+				a {
+					font-size: 20px;
+				}
+			}
+			@include respond-to('small') {
+				display: none;
+			}
+		}
+		@include respond-to('large') {
+			text-align: center;
+			h6 {
+			font-family: $ptsans;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 14px;
+			letter-spacing: 2px;
+			position: relative;
+			a:hover::after {
+				content: "";
+				position: absolute;
+				width: 31px;
+				height: 4px;
+				background-color: $green;
+				border-radius: 25px;
+				bottom: -6px;
+				left: 194px;
+			}
+		}
+		}
+		@include respond-to('xlarge') {
+			text-align: center;
+		}
+}
+
+
+.browseEpisodesLeft, .browseEpisodesRight {
+	width: calc(50% - 20px);
+	
+}
+
+.episodeGallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+		@include respond-to('xlarge') {
+		justify-content: space-around;
+		}
+}
+
+.episodeGallery__cell {
+	max-width: 570px;
+	max-height: 380px;
+	position: relative;
+	margin-bottom: 61px;
+		img {
+			max-width: 100%;
+		}
+		@include respond-to('xlarge') {
+		max-width: calc(575px * 0.90);
+		max-height: calc(380px * 0.91);
+		}
+		@include respond-to('large') {
+			max-width: calc(575px * 0.75);
+			max-height: calc(380px * 0.76);
+		}
+		@include respond-to('medium') {
+			max-width: calc(575px * 0.90);
+			max-height: calc(380px * 0.91);
+		}
+		@include respond-to('small') {
+			max-width: calc(575px * 0.90);
+			max-height: calc(380px * 0.91)
+		}
+}
+
+.episodeGallery__cell--Overlay {
+	position: absolute;
+	background-color: rgba(0,0,0, 0.7);
+		@include respond-to('small') {
+			background-color: rgba(0,0,0, 0.4);
+		}
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+}
+
+.overlayContent {
+	padding-top: 68px;
+	padding-left: 47px;
+	padding-right: 47px;
+		h2 {
+			color: white;
+		}
+		@include respond-to('xlarge') {
+			padding-top: 65px;
+			padding-bottom: 0;
+		}
+		@include respond-to('large') {
+			margin-top: 0px;
+			h2 {
+				margin: 0px;
+				padding-top: 6px;
+				font-size: 20px;
+			}
+		}
+		@include respond-to('medium') {
+			margin-top: 2px;
+
+		}
+		@include respond-to('small') {
+			text-align: center;
+			padding-top: 0px;
+			margin-top: 50px;
+				p {
+					margin: 0px;
+					padding-top: 5px;
+					padding-bottom: 10px;
+				}
+				img {
+					padding-bottom: 3px;
+				}
+				h2 {
+					margin: 0px;
+					padding-top: 6px;
+					font-size: 18px;
+				}
+				h6 {
+					margin: 0px;
+					padding-top: 10px;
+					padding-bottom: 15px;
+					font-size: 14px;
+				}
+		}
+		@include respond-to('xsmall') {
+				margin-top: 45px;
+					p {
+					font-size: 12px;
+					margin-top: 0px;
+					padding-top: 5px;
+					padding-bottom: 10px;
+				}
+				h2 {
+					font-size: 16px;
+				}
+				h6 {
+					margin: 0px;
+					font-size: 14px;
+				}
+			}
+}
+	
+.episodeGallery__cell--Overlay:hover {
+	position: absolute;
+	background-color: rgba(0,0,0, 0.4);
+	text-shadow: 0 0 10px black;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.buttonAlign {
+	text-align: center;
+}
+
+.loadMore {
+	font-family: $poppins;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-top: 19px;
+	padding-bottom: 19px;
+	color: rgba(255, 255, 255, 0.67);
+	width: 100%;
+	background-color: #393639;
+	border: none;
+	margin-bottom: 112px;
+		&:hover {
+			color: white;
+			background-color: $green;
+			// background-color:  rgba(255, 255, 255, 0.67);
+		}
+		@include respond-to('xlarge') {
+			width: 90%;
+		}
+}
